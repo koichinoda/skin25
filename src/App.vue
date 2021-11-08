@@ -11,7 +11,6 @@
         </div>
       </div>
     </div>
-    <img landingimg src="./assets/kid.png" />
   </div>
 </template>
 <script>
