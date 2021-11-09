@@ -1,15 +1,19 @@
 <template>
   <div container>
     <div main>
-      <div>
-        <p title v-text="name" />
-        <p v-text="description" />
-      </div>
-      <div linkscontainer>
-        <div v-for="(link, index) in links" v-bind:key="index">
-          <a :href="link.url" target="_blank" v-text="'+ '+link.label" />
+      <div title>
+        <div left>
+          <a href="#">#SVAVGEX</a>
+          <a href="#">NEW DROPS</a>
+          <a href="#">YOUTUBE</a>
         </div>
+        <div middle></div>
       </div>
+      <div description v-text="description"></div>
+    </div>
+    <div right>
+      <a href="#">X THRIVERS</a>
+      <a href="#">CLARA LIONEL FOUNDATION</a>
     </div>
   </div>
 </template>
@@ -18,42 +22,6 @@
   export default {
     name: 'App',
     data: () => ({
-      url: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXw3NjA4Mjc3NHx8ZW58MHx8fHw%3D&w=1000&q=80",
-      name: 'webbendr',
-      links: [
-        {
-          label: 'Tictok',
-          url: 'http://google.com',
-        },
-        {
-          label: 'SnapChat',
-          url: 'http://google.com'
-        },
-        {
-          label: 'instargram',
-          url: 'http://google.com',
-        },
-        {
-          label: 'Twitter',
-          url: 'http://google.com',
-        },
-        {
-          label: 'SoundCloud',
-          url: 'http://google.com',
-        },
-        {
-          label: 'Linkedin',
-          url: 'http://google.com',
-        },
-        {
-          label: 'Discord',
-          url: 'http://google.com',
-        },
-        {
-          label: 'Telegram',
-          url: 'http://google.com',
-        },
-      ],
       description: "Loren ipsum dolor set a met, consectetur adipising elit, sed to eiusmod tempor incididunt ut labore et dolore magnaaliqua.",
   })
   }
@@ -61,39 +29,56 @@
 
 <style lang="scss">
   body {
-    background: #ffff55;
-    color: #4900c2;
+    background: #263e8f;
+    color: #fff;
     font-family: 'Courier New';
-    font-size: 12px;
-    margin: 0;
-  }
-  [container] {
-    min-height: 100vh;
-  }
-  [main] {
-    padding: 2vh 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    max-height: 50vh;
-    height: 48vh;
-    a {
-      font-size: 26px;
-      font-weight: bold;
-    }
-  }
-  [linkscontainer] {
-    max-height: 25vh;
-    overflow-y: scroll;
-  }
-  [title] {
-    font-size: 48px;
+    font-size: 30px;
     font-weight: bold;
     margin: 0;
   }
-  [landingimg] {
-    width: 100%;
-    height: 48vh;
-    background-color: #4900c2;
+  [container] {
+    height: 100vh;
+    display: flex;
+  }
+  [main] {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 80vw;
+    height: 85vh;
+  }
+  [right] {
+    width: 20vw;
+    height: 20vw;
+    transform: rotate(90deg) translateX(10vh);
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    a {
+      color: white;
+      margin: 0 10px;
+    }
+  }
+  [title] {
+    display: flex;
+  }
+  [left] {
+    width: 20vw;
+    transform: rotate(-90deg) translateX(-30vh);
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    a {
+      color: white;
+      margin: 0 10px;
+    }
+  }
+  [middle] {
+    width: 60vw;
+    height: 80vh;
+  }
+  [description] {
+    font-size: 20px;
+    padding: 0 10vw;
   }
 </style>
