@@ -7,7 +7,12 @@
           <a href="#">NEW DROPS</a>
           <a href="#">YOUTUBE</a>
         </div>
-        <div middle></div>
+        <div middle>
+          <div class="head">
+           TWITTER
+          </div>
+          @SAVAGEFENTY
+        </div>
       </div>
       <div description v-text="description"></div>
     </div>
@@ -45,7 +50,6 @@
     flex-direction: column;
     justify-content: space-around;
     width: 80vw;
-    height: 85vh;
   }
   [right] {
     width: 20vw;
@@ -61,10 +65,12 @@
   }
   [title] {
     display: flex;
+    height: 75vh;
   }
   [left] {
     width: 20vw;
-    transform: rotate(-90deg) translateX(-30vh);
+    height: 20vw;
+    transform: rotate(-90deg) translateX(-60vh);
     display: flex;
     align-items: center;
     white-space: nowrap;
@@ -76,6 +82,14 @@
   [middle] {
     width: 60vw;
     height: 80vh;
+    padding: 20px 0;
+    text-align: center;
+    .head {
+      color: white;
+      text-align: left;
+      text-decoration: underline;
+      height: 30vh;
+    }
   }
   [description] {
     font-size: 20px;
